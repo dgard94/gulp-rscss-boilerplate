@@ -1,9 +1,19 @@
-body {
-  background-color: #ffffff;
-  display: block;
+// Setting
+@import "setting/colors";
+@import "setting/variable";
+@import "setting/typography";
 
-  h1 {
-    margin: 0 auto;
-    width: 500px;
-  }
-}
+
+// Tools
+@import "tools/mixins";
+
+// Generic
+@import "generic/normalize";
+
+// Base
+
+// Object
+
+// Components
+
+// Trumps
