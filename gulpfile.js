@@ -3,13 +3,17 @@ var gulp = require("gulp"),
     imagemin = require("gulp-imagemin"),
     autoprefixer = require("gulp-autoprefixer"),
     browserSync = require("browser-sync"),
-    webpack = require("webpack-stream");
+    webpack = require("webpack-stream"),
+    sourcemaps = require("gulp-sourcemaps");
+
 
 // Style
 gulp.task("sass", () => {
   return gulp.src("./src/sass/**/*.scss")
+      .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(autoprefixer())
+      .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest("./dist/css"));
 })
 
